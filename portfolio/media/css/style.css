@@ -1,0 +1,249 @@
+/*Reset*/
+* {
+    margin: 0;
+    padding: 0;
+    border-collapse: collapse;
+    list-style: none;
+    text-decoration: none;
+    font-size: 24px;
+    font-family: "Rajdhani", sans-serif;
+    /* color: white; */
+}
+img {
+    width: 100%;
+}
+main {
+    color: white;
+}
+h3 {
+    font-size: 32px;
+    font-weight: 100;
+}
+h2 {
+    font-size: 32px;
+    font-weight: 300;
+}
+h1 {
+    font-size: 64px;
+    font-weight: 500;
+}
+.welcome {
+    font-size: 96px;
+    font-weight: 500;
+}
+/*Private library*/
+.flex {
+    display: flex;
+}
+.column {
+    flex-direction: column;
+}
+.row {
+    flex-direction: row;
+}
+.justify-start {
+    justify-content: flex-start;
+}
+.justify-end {
+    justify-content: flex-end;
+}
+.justify-center {
+    justify-content: center;
+}
+.justify-between {
+    justify-content: space-between;
+}
+.justify-around {
+    justify-content: space-around;
+}
+.justify-evenly {
+    justify-content: space-evenly;
+}
+.align-center {
+    align-items: center;
+}
+.align-start {
+    align-items: start;
+}
+.align-end {
+    align-items: end;
+}
+.text-center {
+    text-align: center;
+}
+.bold {
+    font-weight: bold;
+}
+.wrap {
+    flex-wrap: wrap;
+}
+/*Paddings and Margins class*/
+.mg1 {
+    margin: 1%;
+}
+.mg2 {
+    margin: 2%;
+}
+.pd1 {
+    padding: 1%;
+}
+.pd2{
+    padding: 2%;
+}
+.mgh2 {
+    margin: 0 2%;
+}
+.mgv2 {
+    margin: 2% 0;
+}
+.pdh2 {
+    padding: 0 2%;
+}
+.pdv2 {
+    padding: 2% 0;
+}
+.pdv5 {
+    padding: 5% 0;
+}
+.pdv10 {
+    padding: 10% 0;
+}
+/* Color Class */
+.color-white {
+    color: #fbffff
+}
+.color-black {
+    color: black;
+}
+.blur {
+    backdrop-filter: blur(10px);
+}
+/*Hover*/
+.menu-header li a:hover {
+    color: #0BB3FB;
+}
+/*Header*/
+nav {
+    height: 100px;
+}
+.menu-header li a:link {
+    color: black;
+}
+.menu-header {
+    gap: 5%;
+    width: 50%;
+    font-weight: bold;
+}
+.burger {
+    height: 50px;
+    width: 50px;
+}
+.logo {
+    height: 65px;
+    width: 370px;
+}
+/*Footer*/
+footer {
+    background-color: #1d1d1d;
+    height: 110px;
+    padding: 1% 0;
+}
+footer a:link {
+    color: white;
+}
+footer a:hover {
+    color: #0BB3FB;
+}
+.footer-social {
+    height: 30px;
+    width: 30px;
+}
+.footer-top h2, .footer-bottom div, .footer-bottom h3 {
+    width: 33%;
+}
+.footer-logo-container {
+    gap: 25px;
+}
+/*Home*/
+.home-main {
+    min-height: 87vh;
+    background-image: conic-gradient(from 360deg at 50% 100%, #272727 0%, #10526e 100%);
+}
+.home-main div {
+    width: 50%;
+}
+.white-line {
+    height: 1px;
+    background-color: white;
+}
+.hire {
+    display: flex;
+    font-weight: bold;
+    justify-content: flex-end;
+    cursor: pointer;
+    color: brown;
+}
+.home-button, .home-button2 {
+    height: 70px;
+    width: 250px;
+    border-radius: 25px;
+    background-color: rgba(0, 0, 0, 0.6);
+    cursor: pointer;
+    /* box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5); */
+}
+.home-button2 {
+    background-color: #10526e;
+}
+.home-pic {
+    height: 375px;
+    width: 300px;
+    border-radius: 10px;
+    box-shadow: 4px 4px 2px rgba(0, 0, 0, 0.5), -2px -2px rgba(255, 255, 255, 0.25);
+}
+.citation {
+    font-style: italic;
+    font-weight: 500;
+}
+.main-right {
+    gap: 20px;
+}
+/*Resume*/
+.nav-resume {
+    width: 100%;
+    background-color: #3D3D3D;
+    height: fit-content;
+    border: 1px solid black;
+}
+.resume-left, .resume-right {
+    width: 50%;
+}
+.resume-left img {
+    min-height: 68.6vh;
+}
+.black-line {
+    height: 1px;
+    background-color: black;
+}
+.resume-right {
+    background: linear-gradient(135deg, rgba(87, 87, 87, 1) 0%, rgba(55, 87, 97, 1) 100%);
+    padding-left: 3%;
+    padding-right: 2%;
+}
+.resume-right .black-line {
+    width: 30%;
+}
+.resume-select {
+    gap: 10px;
+}
+.resume-select div {
+    width: 25px;
+    height: 3px;
+}
+.resume-nav {
+    gap: 70px;
+}
+.resume-nav img {
+    height: 50px;
+    width: 50px;
+    margin: 2%;
+}
