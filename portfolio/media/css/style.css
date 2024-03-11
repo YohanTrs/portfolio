@@ -3,11 +3,13 @@
     margin: 0;
     padding: 0;
     border-collapse: collapse;
-    list-style: none;
     text-decoration: none;
-    font-size: 24px;
+    font-size: 20px;
     font-family: "Rajdhani", sans-serif;
     /* color: white; */
+}
+button {
+    border: none;
 }
 img {
     width: 100%;
@@ -16,7 +18,7 @@ main {
     color: white;
 }
 h3 {
-    font-size: 32px;
+    font-size: 26px;
     font-weight: 100;
 }
 h2 {
@@ -67,6 +69,9 @@ h1 {
 }
 .align-end {
     align-items: end;
+}
+.gap25 {
+    gap: 25px;
 }
 .text-center {
     text-align: center;
@@ -133,6 +138,7 @@ nav {
     gap: 5%;
     width: 50%;
     font-weight: bold;
+    list-style: none;
 }
 .burger {
     height: 50px;
@@ -214,10 +220,13 @@ footer a:hover {
     height: fit-content;
     border: 1px solid black;
 }
+.nav-resume ul li {
+    list-style: none;
+}
 .resume-left, .resume-right {
     width: 50%;
 }
-.resume-left img {
+.resume-img {
     min-height: 68.6vh;
 }
 .black-line {
@@ -225,7 +234,6 @@ footer a:hover {
     background-color: black;
 }
 .resume-right {
-    background: linear-gradient(135deg, rgba(87, 87, 87, 1) 0%, rgba(55, 87, 97, 1) 100%);
     padding-left: 3%;
     padding-right: 2%;
 }
@@ -246,4 +254,26 @@ footer a:hover {
     height: 50px;
     width: 50px;
     margin: 2%;
+}
+.underline {
+    text-decoration: underline;
+}
+/*Resume sliders*/
+#bgs1 {
+    background: linear-gradient(135deg, rgba(87, 87, 87, 1) 0%, rgba(55, 87, 97, 1) 100%);
+}
+#bgs2 {
+    background: linear-gradient(135deg, #597D4D 0%, #2C4342 100%);
+}
+#bgs3 {
+    background: linear-gradient(135deg, #C7C7C7 0%, #247497 100%);
+}
+#bgs4 {
+    background: linear-gradient(135deg, #BA9C86 0%, #815D49 100%);
+}
+#bgs5 {
+    background: linear-gradient(135deg, #2B485C 0%, #818181 100%);
+}
+#bgs6 {
+    background: linear-gradient(135deg, #717238 0%, #A05F30 100%);
 }
