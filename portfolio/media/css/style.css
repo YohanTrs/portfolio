@@ -3,10 +3,16 @@
     margin: 0;
     padding: 0;
     border-collapse: collapse;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
     text-decoration: none;
     font-size: 20px;
     font-family: "Rajdhani", sans-serif;
     /* color: white; */
+}
+*:visited {
+    color: black;
 }
 button {
     border: none;
@@ -73,6 +79,9 @@ h1 {
 .gap25 {
     gap: 25px;
 }
+.gap12 {
+    gap: 12px;
+}
 .text-center {
     text-align: center;
 }
@@ -127,6 +136,9 @@ h1 {
 .menu-header li a:hover {
     color: #0BB3FB;
 }
+.main-right div h3 a:hover {
+    color: #0BB3FB;
+}
 /*Header*/
 nav {
     height: 100px;
@@ -151,10 +163,16 @@ nav {
 /*Footer*/
 footer {
     background-color: #1d1d1d;
-    height: 110px;
+    height: 150px;
     padding: 1% 0;
+    position: absolute;
+    right: 0;
+    left: 0;
 }
 footer a:link {
+    color: white;
+}
+footer a:visited {
     color: white;
 }
 footer a:hover {
@@ -172,7 +190,7 @@ footer a:hover {
 }
 /*Home*/
 .home-main {
-    min-height: 87vh;
+    min-height: 83vh;
     background-image: conic-gradient(from 360deg at 50% 100%, #272727 0%, #10526e 100%);
 }
 .home-main div {
@@ -187,7 +205,12 @@ footer a:hover {
     font-weight: bold;
     justify-content: flex-end;
     cursor: pointer;
-    color: brown;
+    color: #0BB3FB;
+}
+.hire:hover {
+    box-shadow: 4px 4px 5px 0 rgba(13, 122, 206, 0.75);
+    transition: all 0.5s ease-in ;
+
 }
 .home-button, .home-button2 {
     height: 70px;
@@ -195,10 +218,33 @@ footer a:hover {
     border-radius: 25px;
     background-color: rgba(0, 0, 0, 0.6);
     cursor: pointer;
-    /* box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5); */
+    color: #fff;
+    text-align:center;
+    border: none;
+    background-size: 300% 100%;
+    -moz-transition: all .7s ease-in-out;
+    -o-transition: all .7s ease-in-out;
+    -webkit-transition: all .7s ease-in-out;
+    transition: all .7s ease-in-out;
 }
 .home-button2 {
-    background-color: #10526e;
+    background-image: linear-gradient(to right, #10526e, #485563,#272727);
+    box-shadow: 1px 1px 5px 0 rgba(13, 122, 206, 0.75);
+}
+.home-button {
+    background-image: linear-gradient(to right, #272727, #485563, #10526e);
+    box-shadow: 4px 4px 5px 0 rgba(59, 59, 59, 0.75);
+}
+.home-button:hover, .home-button2:hover {
+    background-position: 100% 0;
+    -moz-transition: all .7s ease-in-out;
+    -o-transition: all .7s ease-in-out;
+    -webkit-transition: all .7s ease-in-out;
+    transition: all .7s ease-in-out;
+    font-weight: bold;
+}
+.home-button:focus, .home-button2:focus {
+    outline: none;
 }
 .home-pic {
     height: 375px;
@@ -227,7 +273,7 @@ footer a:hover {
     width: 50%;
 }
 .resume-img {
-    min-height: 68.6vh;
+    height: 80.5vh;
 }
 .black-line {
     height: 1px;
@@ -257,6 +303,135 @@ footer a:hover {
 }
 .underline {
     text-decoration: underline;
+}
+.color-blue {
+    color: #0BB3FB;
+    font-weight: 500;
+}
+.bg-blue {
+    background-color: #0BB3FB;
+}
+/*Contact*/
+.contact {
+    min-height: 87vh;
+    background-image: conic-gradient(from 360deg at 50% 100%, #10526e  0%, #272727 100%);
+}
+.contact div {
+    width: 50%;
+}
+.contact div form {
+    width: 90%;
+}
+input {
+    background-color: transparent;
+    color: white;
+    border: none;
+    border-bottom: 1px solid white;
+}
+textarea {
+    border: none;
+    background-color: #505050;
+    color: white;
+    border-radius: 10px;
+    padding: 2%;
+}
+.contact-submit {
+    width: fit-content;
+    margin: 0 auto;
+    border: 1px solid white;
+    padding: 0 8%;
+    margin-top: 20px;
+}
+form > * {
+    margin-top: 20px;
+}
+.icon {
+    height: 40px;
+    width: 40px;
+}
+.contact-text {
+    font-weight: 600;
+}
+.main-right a:link {
+    font-size: 24px;
+    font-weight: 600;
+    color: white;
+}
+.main-right a:visited {
+    color: white;
+}
+/*Project*/
+.project-left {
+    height: 81.5vh;
+    width: 50%;
+    padding: 2%;
+    gap: 50px;
+}
+.project-left h2, .project-left h3, .project-left h1 {
+ font-weight: 600;
+ z-index: 2;
+}
+.project-container1 {
+    background-color: #754D3C;
+}
+.project-container2 {
+    background-color: #3C6B75;
+}
+.project-container3 {
+    background-color: #554C8E;
+}
+.project1{
+    background: url(../img/projets/driving-old-car-road-trip-generated-by-ai\ 1\(1\).jpg);
+}
+.project2{
+    background: url(../img/projets/sagadecor-bg.png);
+}
+.project3{
+    background: url(../img/projets/gsimulatorbg.jpg);
+}
+.project-background {
+    max-width: 1920px;
+    filter: brightness(0.55);
+    clip-path: polygon(0 0, 100% 0, 30% 100%, 0% 100%);
+    position: absolute;
+    z-index: 0;
+    width: 100%;
+    height: 89vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.project-right {
+    position: relative;
+    width: 50%;
+    align-items: center;
+    justify-content: space-between;
+    overflow: hidden;
+}
+.project-slider-container {
+    align-items: center;
+    gap: 18px;
+    margin-bottom: 20px;
+}
+.thumbnail div {
+    position: absolute;
+    top: 30%;
+    right: -200px;
+    gap: 20px;
+    /* width: 130%; */
+}
+.thumb-pic {
+    height: 300px;
+    width: 350px;
+}
+.thumb-hide {
+    height: 300px;
+    width: fit-content;
+}
+#project-button {
+    width: 200px;
+}
+#project-h1 {
+    font-size: 60px;
 }
 /*Resume sliders*/
 #bgs1 {
