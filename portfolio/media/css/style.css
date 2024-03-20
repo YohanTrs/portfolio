@@ -1,3 +1,82 @@
+/*Animations*/
+@keyframes appear-right {
+    0% {
+        opacity: 0;
+        transform: translateX(100%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0%);
+    }
+}
+@-moz-keyframes appear-right {
+    0% {
+        opacity: 0;
+        transform: translateX(20%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0%);
+    }
+}
+@-o-keyframes appear-right {
+    0% {
+        opacity: 0;
+        transform: translateX(100%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0%);
+    }
+}
+@-webkit-keyframes appear-right {
+    0% {
+        opacity: 0;
+        transform: translateX(100%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0%);
+    }
+}
+@keyframes appear {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+@-moz-keyframes appear {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+@-o-keyframes appear {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+@-webkit-keyframes appear {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+.opacity {
+    animation: appear 1s forwards;
+}
+.appear {
+    animation: appear-right 1s forwards;
+}
 /*Reset*/
 * {
     margin: 0;
@@ -137,7 +216,7 @@ h1 {
     color: #0BB3FB;
 }
 .main-right div h3 a:hover {
-    color: #0BB3FB;
+    color: rgb(11, 179, 251);
 }
 /*Header*/
 nav {
@@ -153,8 +232,7 @@ nav {
     list-style: none;
 }
 .burger {
-    height: 50px;
-    width: 50px;
+    display: none;
 }
 .logo {
     height: 65px;
@@ -163,8 +241,7 @@ nav {
 /*Footer*/
 footer {
     background-color: #1d1d1d;
-    height: 150px;
-    padding: 1% 0;
+    height: 110px;
     position: absolute;
     right: 0;
     left: 0;
@@ -190,7 +267,7 @@ footer a:hover {
 }
 /*Home*/
 .home-main {
-    min-height: 83vh;
+    min-height: 77.3vh;
     background-image: conic-gradient(from 360deg at 50% 100%, #272727 0%, #10526e 100%);
 }
 .home-main div {
@@ -208,9 +285,8 @@ footer a:hover {
     color: #0BB3FB;
 }
 .hire:hover {
-    box-shadow: 4px 4px 5px 0 rgba(13, 122, 206, 0.75);
+    color: rgba(255, 255, 255, 0.3);
     transition: all 0.5s ease-in ;
-
 }
 .home-button, .home-button2 {
     height: 70px;
@@ -260,6 +336,9 @@ footer a:hover {
     gap: 20px;
 }
 /*Resume*/
+.resumain {
+    background-color: #272727;
+}
 .nav-resume {
     width: 100%;
     background-color: #3D3D3D;
@@ -276,29 +355,37 @@ footer a:hover {
     width: 50%;
 }
 .resume-img {
-    height: 80.5vh;
+    height: 78.2vh;
     object-fit: cover;
+    filter: brightness(0.45);
 }
 .black-line {
     height: 1px;
     background-color: black;
 }
 .resume-right {
-    padding-left: 3%;
-    padding-right: 2%;
+    padding: 2%;
 }
 .resume-right .black-line {
     width: 30%;
 }
 .resume-select {
     gap: 10px;
+    z-index: 1;
 }
 .resume-select div {
     width: 25px;
     height: 3px;
 }
 .resume-nav {
+    position: absolute;
+    bottom: -30px;
+    left: 10px;
+    right: 10px;
     gap: 40px;
+}
+.prev, .next {
+    z-index: 1;
 }
 .resume-nav img {
     height: 50px;
@@ -316,8 +403,7 @@ footer a:hover {
     background-color: #0BB3FB;
 }
 .main-resume > .resume-right > h2{
-    font-size: 50px;
-    
+    font-size: 50px;   
 }
 .main-resume > .resume-right > h3{
     font-size: 25px;
@@ -327,7 +413,7 @@ footer a:hover {
 }
 /*Contact*/
 .contact {
-    min-height: 87vh;
+    min-height: 77.3vh;
     background-image: conic-gradient(from 360deg at 50% 100%, #10526e  0%, #272727 100%);
 }
 .contact div {
@@ -353,8 +439,12 @@ textarea {
     width: fit-content;
     margin: 0 auto;
     border: 1px solid white;
-    padding: 0 8%;
+    padding: 1% 8%;
     margin-top: 20px;
+}
+.contact-submit:hover {
+    background-color: rgba(0, 0, 0, 0.5);
+    cursor: pointer;
 }
 form > * {
     margin-top: 20px;
@@ -376,14 +466,20 @@ form > * {
 }
 /*Project*/
 .project-left {
-    height: 81.5vh;
+    min-height: 89.5vh;
     width: 50%;
-    padding: 2%;
+    padding: 0 2%;
     gap: 50px;
 }
 .project-left h2, .project-left h3, .project-left h1 {
  font-weight: 600;
  z-index: 2;
+}
+.project-container {
+    display: none;
+}
+.project-container.active {
+    display: flex;
 }
 .project-container1 {
     background-color: #754D3C;
@@ -410,7 +506,7 @@ form > * {
     position: absolute;
     z-index: 0;
     width: 100%;
-    height: 89vh;
+    min-height: 89.5vh;
     background-size: cover;
     background-repeat: no-repeat;
 }
@@ -469,17 +565,25 @@ form > * {
 #bgs6 {
     background: linear-gradient(135deg, #717238 0%, #A05F30 100%);
 }
-
+.resume-slider {
+    display: none;
+}
+.resume-slider.active {
+    display: block; 
+}
+.slider2-title {
+    list-style: none;
+}
+.slider2-title h3 {
+    font-weight: bold;
+    font-size: 23px;
+}
 @media screen and (max-width :850px) {
     .logo {
         object-fit: cover;
         object-position: 100%;   
         height: 40px;
         width: 115px;        
-    }
-    .burger {
-        height: 35px;
-        width: 35px;
     }
     nav {
         height: 70px;
@@ -518,10 +622,9 @@ form > * {
         width: 200px;
     }
     .home-main {
-       min-height: fit-content;
+       min-height: 81.5vh;
     }
     .main-left {
-        justify-content: flex-start;
         gap: 25px;
     }
     .home-button, .home-button2 {
@@ -532,15 +635,14 @@ form > * {
         position: relative;
         justify-content: flex-start;
         width: 100%;
-        height: 81vh;
+        min-height: 92.3vh;
         gap: 20px;
     }
     .project-right {
-        position: inherit;
-        top: 40%;
-        height: 100%;
+        position: absolute;
+        top: 20%; /*no overflow hack*/
+        min-height: 80vh;
         width: 100%;
-        
     }
     .responsive-project {
         display: flex;
@@ -551,8 +653,9 @@ form > * {
         flex-direction: column;
     }
     .thumbnail div {
-        height: 100%;
-        top: 55%;
+        position: absolute;
+        height: fit-content;
+        top: 40%;
     }
     .thumb-pic, .thumb-hide {
         height: 200px;
@@ -563,7 +666,7 @@ form > * {
     }
     .contact {
         flex-direction: column;
-        min-height:fit-content ;
+        height: fit-content;
     }
     .contact div {
         width: 100%;
@@ -571,6 +674,9 @@ form > * {
     }
     .main-right div {
        justify-content: center;
+    }
+    .main-right {
+        gap: 5px;
     }
     .main-resume > .resume-right > h2{
         font-size: 26px;
@@ -588,12 +694,6 @@ form > * {
     }
     .resume-left, .resume-right {
         width: 100%;
-    }
-    .resume-slider {
-        display: none;
-    }
-    .resume-slider:nth-child(6) {
-        display: block;
     }
     .hstop, .hsbottom {
         flex-direction: row;
@@ -618,6 +718,7 @@ form > * {
     }
     .resume-nav {
         height: 50px;
+        bottom: 0;
     }
     .nav-resume {
         display: none;
@@ -632,10 +733,10 @@ form > * {
         height: 46.25vh;
     }
     .rr2 {
-        height: 60.25vh;
+        height: 47.25vh;
     }
     .ri2 {
-       height: 32.25vh; 
+        height: 45.25vh; 
     }
     .ri5 {
         height: 36.25vh;
@@ -643,16 +744,17 @@ form > * {
     .rr5 {
         height: 56.26vh;
     }
-}
-
-@media screen and (max-width :460px) {
-    .logo {
-        object-fit: cover;
-        object-position: 0%;   
-        height: 30px;
-        width: 150px;        
+    #conf, #ment {
+        display: none;
     }
+    #conf-text, #ment-text {
+        width: 100%;
+        text-align: center;
+    }
+}
+@media screen and (max-width :460px) {
     .burger {
+        display: block;
         height: 20px;
         width: 20px;
     }
@@ -666,11 +768,36 @@ form > * {
         font-size: 20px;
     }
     .menu-header {
-        width: 75%;
-        display: none;
+        width: 100%;
+        visibility: hidden;
+        opacity: 0;
+        transition: opacity 1.5s;
+    }
+    .menu-header.menu-open {
+        visibility: visible; 
+        opacity: 1; 
+    }
+    .logo {
+        visibility: visible;
+        opacity: 1;
+        z-index: -1;
+        top: 0;
+        left: 0;
+        transition: opacity 0.5s, visibility 0.5s; 
+        object-fit: cover;
+        object-position: 0%;
+        height: 30px;
+        width: 150px;
+    }
+    .menu-header.menu-open + .logo {
+        visibility: hidden;
+        opacity: 0;
     }
     .menu-header li a {
         font-size: 14px;
+    }
+    .home-pic {
+        display: none;
     }
     .project-left {
         gap: 10px;
@@ -678,20 +805,26 @@ form > * {
     #project-button {
         width: 140px;
     }
+    .footer-logo-container {
+        gap: 20vw;
+    }
     .footer-social {
-        margin-bottom:-70px;
+        margin-bottom:-36px;
     }
     .home-main div {
         width: 100%;
     }
     .home-main {
         flex-direction: column;
+        background: url('../img/home + header + footer/home-picture-black.png');
+        background-size: cover;
     }
     .main-right {
         margin: 20px 0;
     }
     .main-left {
         text-align: center;
+        gap: 10px;
     }
     .thumb-pic, .thumb-hide {
         height: 150px;
@@ -699,7 +832,6 @@ form > * {
     }
     .thumbnail div {
         left: 15%;
-        top: 60%;
     }
     .project-slider-container {
         gap: 10px;
@@ -717,7 +849,7 @@ form > * {
     }
     .resume-img {
         position: absolute;
-        height: 81.7vh;
+        height: 100%;
         top: 70px;
         z-index: -1;
         filter: brightness(0.3);
@@ -726,6 +858,45 @@ form > * {
         background: none;
     }
     .resume-right {
-        height: 81.7vh;
+        height: 89vh;
+    }
+    .resume-nav {
+        bottom: 30px;
     }
 }
+
+
+/*Hauteur Chrome*/
+
+@supports (-webkit-appearance: none) and (not (overflow:-moz-scrollbars-none)) {
+    .home-main {
+        min-height: 87vh;
+    }
+    .resume-img {
+        height: 78.2vh;
+    }
+    .contact {
+        min-height: 87vh;
+    }
+    .project-left {
+        min-height: 91vh;
+    }
+    .project-background {
+        min-height: 91vh;
+    }
+    }
+
+    @media screen and (max-width :850px) {
+        @supports (-webkit-appearance: none) and (not (overflow:-moz-scrollbars-none)) {
+            .resume-img {
+                height: 45vh;
+            }
+        }
+    }
+    @media screen and (max-width :460px) {
+        @supports (-webkit-appearance: none) and (not (overflow:-moz-scrollbars-none)) {
+            .resume-img {
+                height: 100%;
+            }
+        }
+    }
